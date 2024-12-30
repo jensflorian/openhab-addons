@@ -1,6 +1,6 @@
 # KM200 Binding
 
-The KM200 Binding is communicating with a [Buderus Logamatic web KM200 / KM100 / KM50](https://www.buderus.de/de/produkte/catalogue/alle-produkte/7719_gateway-logamatic-web-km200-km100-km50).
+The KM200 Binding is communicating with a [Buderus Logamatic web KM200 / KM100 / KM50](https://www.buderus.de/de/produkte/catalogue/alle-produkte/7719_gateway-logamatic-web-km200-km100-km50). It also supports the [Bosch MB LANi communication interface for CR400 / CW400 / CW800](https://tt-smarthome.resource.bosch.com/documents/Manual/DE/Junkers/BoschMBLANiInstallationsanleitung.pdf) used in Bosch or Junkers heaters.
 It is possible to receive and send parameters like string or float values.
 
 **Important**: If the communication is not working and you see in the logfile errors like "illegal key size" then you have to change the [Java Cryptography Extension to the Unlimited Strength Jurisdiction](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html).
@@ -25,7 +25,7 @@ This binding supports 11 different things types
 
 ### KM 50/100/200
 
-This Binding is tested on a KM200 but it should work on KM50 and KM100, too.
+This Binding is tested on a KM200 but it should work on KM50 and KM100, too. It has been sucessfully tesed with MB LANi.
 
 ### Discovery
 
@@ -39,7 +39,7 @@ The _kmdevice_ bridge requires the following configuration parameters:
 
 | Parameter Label           | Parameter ID    | Description                                                                       | Required | Default              | Example                                                          |
 |---------------------------|-----------------|-----------------------------------------------------------------------------------|----------|----------------------|------------------------------------------------------------------|
-| IP address                | ip4_address     | The IP address of the KMXXX device                                                | true     |                      | 192.168.1.10                                                     |
+| IP address                | ip4_address     | The IP address of the KMXXX or MBLANidevice                                       | true     |                      | 192.168.1.10                                                     |
 | Refresh Interval          | refreshInterval | The refresh interval in seconds which is used to poll the device.                 | true     |    30                | 30                                                               |
 | Private Key               | privKey         | Take a look to the internet. Maybe you will find a way for generation.            | true     |                      | 0000FFFFEEEEDDDDCCCCBBBBAAAA999988887777666655554444333322221111 |
 | Read Delay                | readDelay       | Delay between two read attempts in ms.                                            | true     |    100               | 100                                                              |
